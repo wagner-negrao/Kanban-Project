@@ -4,7 +4,9 @@ from openai import OpenAI
 from dotenv import load_dotenv
 
 # Try to load .env from the project root
-project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Current file: backend/src/app/services/ai.py
+# Project root is 4 levels up: /
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 load_dotenv(os.path.join(project_root, ".env"))
 
 OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")

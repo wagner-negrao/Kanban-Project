@@ -1,7 +1,10 @@
 import sqlite3
 import os
 
-DB_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "kanban.db")
+# Move DB_PATH to be relative to the project root (backend/)
+# Current file: backend/src/app/core/database.py
+# Root is 3 levels up from this file's directory: backend/
+DB_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))), "kanban.db")
 
 def get_db_connection():
     conn = sqlite3.connect(DB_PATH)
@@ -18,6 +21,3 @@ def init_db():
     ''')
     conn.commit()
     conn.close()
-
-# Initialize on import
-init_db()
