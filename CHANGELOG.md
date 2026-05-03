@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.0] - 2026-05-03
+
+### Changed
+- Refactored backend into a modular package structure (`backend/src/app/`) for improved maintainability.
+- Organized backend logic into specialized modules: `api`, `core`, `models`, and `services`.
+- Updated backend tests to support the new modular architecture.
+
+### Added
+- GitHub Actions CI pipeline (`.github/workflows/ci.yml`) to automatically run frontend and backend unit tests on push and pull requests.
+
 ## [0.0.1] - 2026-05-03
 
 ### Added
